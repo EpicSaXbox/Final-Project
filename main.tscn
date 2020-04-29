@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://COVID-19.jpg" type="Texture" id=1]
@@ -305,3 +306,32 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( 5.72205e-05, 5.72205e-05 )
 shape = SubResource( 2 )
+=======
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Corona Walls.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Florida Sand Beach.jpg" type="Texture" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=4]
+[ext_resource path="res://AudioStreamPlayer2D.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [ 87.0 ]
+}
+
+[node name="Corona Walls" parent="." instance=ExtResource( 1 )]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 435, 157 )
+texture = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+[node name="WorldComplete" parent="." instance=ExtResource( 4 )]
+position = Vector2( 898.26, 274.988 )
+world_scene = "res://Second.tscn"
+
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource( 5 )]
+>>>>>>> d29b77740bf7ce1abd0763e20f1fecec7f0573fc
